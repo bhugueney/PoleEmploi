@@ -3,37 +3,55 @@
 SCHEDULED: <2017-06-26 Mon 09:00>
 
 ** Contexte dans le SI d'une entreprise
+Apporter une vision globale des éléments constituant un système informatique et sa fabrication
+Mettre à contribution la réflexion “boîte à outil” tenue avec la promo 1 ?
+
 ** Maintenance évolutive
+30% des dépenses informatiques (DSI) sont faites sur du build d’après une étude publiée en juin 2016 par PwC (PricewaterhouseCoopers) sur un panel de 21 DSI.
+L'enjeu pour un.e développeur.se junior est donc largement plus d’être capable d'appréhender / se retrouver dans un applicatif / une infrastructure existant.e que d’être capable d'en créer un.e (qui plus est, seul.e).
 On ne part pas de "rien", et en fait, même dans ce cas, on fait souvent évoluer un "squelette" généré automatiquement (/scafolding/).
 
 ** Exemples pratiques :ERIC:
 SCHEDULED: <2017-06-26 Mon 14:00>
 
 Cf. Pôle Emploi promo #1
+D'autres exemples d’applications vitrines sur Github (ex. Pet Store)
 
 * Bases de données
 SCHEDULED: <2017-06-27 Tue 09:00>
 ** Contexte
+Parler des limites des approches fichier (ex. http://polymorphe.free.fr/cours/bd/sql/poly_2.html )
+Parler de séparation entre visions logiques et physiques
+
 *** Persistance
 fiabilité
 accès concurrents
+gestion des droits, historisation et autres problématiques techniques transverses
+
 *** Performance
 volumes en jeu
+scalabilité horizontale / verticale
 
 - accès partiels (filtrage)
 - opérations (max, min, sommes, …)
-** Types de données
+
+** Familles de SGBD
+Différentes approches : tabulaire / relationnelle, document, données temporelles, données géographiques, etc.
+
 *** Entités-Relations
-cf objects comme compositions d'attributs de types primitifs
+cf. objects comme compositions d'attributs de types primitifs
 *SGBDR* c'est ce qui va nous intéresser
-Liens avec feuilles Excel (mais aussi *différences* !)
+MCD, MLD, MPD
+Approche Merise
+Comparaison (liens et différences) avec fichiers texte et excel, notamment sur la gestion de la redondance
+
 *** Documents
-cf typage dynamique vs typage statique
-NoSQL
 *** Séries temporelles
 *** Données géolocalisées
+
 * SGBDR, SQL
 ** Types d'utilisation
+** Vocabulaire
 *** Bibliothèque (/embedded/)
    https://en.wikipedia.org/wiki/Embedded_database
 e.g. https://fr.wikipedia.org/wiki/H2_(base_de_donn%C3%A9es) 
@@ -61,31 +79,41 @@ SQL92 ?
 (NOTE : l'essentiel du temps de formation)
 ** Outils :
 *** Sans installations
-    https://www.khanacademy.org/computer-programming/new/sql
+https://www.khanacademy.org/computer-programming/new/sql
+https://livesql.oracle.com/apex/livesql/file/index.html (attention : nécessite un compte + éphémère)
 
     Attention ! Pas de contraintes sur les types   https://sqlite.org/faq.html#q3
 *** "Installation" minimale (téléchargement & exécution)
 http://www.h2database.com/html/main.html
 http://www.h2database.com/html/cheatSheet.html
 
+*** "Installation" plus conséquente
+Oracle XE : http://www.oracle.com/technetwork/database/database-technologies/express-edition/overview/index.html
 
-
+*** Client SQL
+SQL Developer, SQuirreL
 
 ** Clés
 *** primaire
 *** secondaire
+** Contraintes
 ** Filtrages
 ** Aggrégats
 ** Jointures
 ** Composabilité
 ** Transaction
+  ACID
   roll-back
 * API
-** Chaînes de caractères
+** JDBC
+*** Vocabulaire (Connexion, Statement, ResultSet)
+*** Notion de Driver (Interfaces / Implémentations)
+** Bonnes pratiques
+*** Chaînes de caractères
 *Ne pas concaténer des chaînes de caractères avec quoi que ce soit venant de l'extérieur !*
 SQL injection 
 https://xkcd.com/327/
-** Requêtes paramétrées
+*** Requêtes paramétrées
 
 * Problématiques de performance
 
@@ -95,6 +123,8 @@ https://xkcd.com/327/
 
 
 * ORM
+Impedance mismatch
+
 Automatisation des liens :
 - classes / tables 
 - attributs / colonnes
