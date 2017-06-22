@@ -4,32 +4,40 @@ SCHEDULED: <2017-06-26 Mon 09:00>
 
 ** Contexte dans le SI d'une entreprise
 Apporter une vision globale des éléments constituant un système informatique et sa fabrication
+
 Mettre à contribution la réflexion “boîte à outil” tenue avec la promo 1 ?
 
 ** Maintenance évolutive
 30% des dépenses informatiques (DSI) sont faites sur du build d’après une étude publiée en juin 2016 par PwC (PricewaterhouseCoopers) sur un panel de 21 DSI.
+
 L'enjeu pour un.e développeur.se junior est donc largement plus d’être capable d'appréhender / se retrouver dans un applicatif / une infrastructure existant.e que d’être capable d'en créer un.e (qui plus est, seul.e).
+
 On ne part pas de "rien", et en fait, même dans ce cas, on fait souvent évoluer un "squelette" généré automatiquement (/scafolding/).
 
 ** Exemples pratiques :ERIC:
 SCHEDULED: <2017-06-26 Mon 14:00>
 
 Cf. Pôle Emploi promo #1
+
 D'autres exemples d’applications vitrines sur Github (ex. Pet Store)
 
 * Bases de données
 SCHEDULED: <2017-06-27 Tue 09:00>
 ** Contexte
 Parler des limites des approches fichier (ex. http://polymorphe.free.fr/cours/bd/sql/poly_2.html )
+
 Parler de séparation entre visions logiques et physiques
 
 *** Persistance
 fiabilité
+
 accès concurrents
+
 gestion des droits, historisation et autres problématiques techniques transverses
 
 *** Performance
 volumes en jeu
+
 scalabilité horizontale / verticale
 
 - accès partiels (filtrage)
@@ -40,9 +48,13 @@ Différentes approches : tabulaire / relationnelle, document, données temporell
 
 *** Entités-Relations
 cf. objects comme compositions d'attributs de types primitifs
+
 *SGBDR* c'est ce qui va nous intéresser
+
 MCD, MLD, MPD
+
 Approche Merise
+
 Comparaison (liens et différences) avec fichiers texte et excel, notamment sur la gestion de la redondance
 
 *** Documents
