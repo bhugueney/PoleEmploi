@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+<script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
+</head> 
+<body>
+here, ui elts to interact with post
+
+<p/>
+<a href="./dynamic">lien vers Servlet</a>
+	
+<form name="loginForm" method="post" action="dynamic">
+    Username: <input type="text" name="username"/> <br/>
+    Password: <input type="password" name="password"/> <br/>
+    <input type="submit" value="Login" />
+</form>
+
+<form action="./dynamic" method="post">
+    <div>
+        <label for="nom">Nom :</label>
+        <input type="text" id="name" name="name" />
+    </div>
+<div>
+    Password: <input type="password" name="password"/> <br/>
+</div>
+    <div>
+        <label for="courriel">Courriel :</label>
+        <input type="email" id="email" name="email"/>
+    </div>
+    <div>
+        <label for="message">Message :</label>
+        <textarea id="message" name="message"></textarea>
+    </div>
+    <div class="button">
+        <button type="submit">Envoyer votre message</button>
+    </div>
+</form>
+
+<script>
+  $(document).ready(function(){
+    $('#DeleteButton').click(function(){
+    	$.ajax({
+    		  url: '/dynamic/t/123',
+    		  method: 'DELETE'
+    		})
+    		  .done(function( data ) {
+    		    console.log(data);
+    		  });
+    });
+  });
+</script>
+
+<input type="button" value="deleteValue" id="DeleteButton" >
+
+</body>
+</html>

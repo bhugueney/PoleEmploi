@@ -12,14 +12,12 @@ public class Application {
 		Server server = new Server(9092);
 		final ServletContextHandler context = new ServletContextHandler();
       	context.addServlet(DefaultServlet.class, "/*");
-      	String [] welcomeFiles = {"index.html"};
+      	String [] welcomeFiles = {"indexTOTO.html"};
 	    context.setWelcomeFiles(welcomeFiles);
 	    context.setResourceBase("./src/main/resources/");
-
-	    ServletHolder holderDynamic = new ServletHolder("dynamic", HelloServlet.class);
-        context.addServlet(holderDynamic, "/dynamic/*");
-	    
         System.err.println("resourcesBase:"+context.getResourceBase());
+
+	    context.addServlet(HelloServlet.class, "/dynamic/*");
         server.setHandler(context);
         server.setStopAtShutdown(true);
         server.start();
